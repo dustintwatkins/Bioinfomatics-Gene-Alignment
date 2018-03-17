@@ -13,14 +13,42 @@ else:
 
 import time
 
+def SUB = 1
+def INDEL = 5
+def MATCH = -3
 
-def find_min(val_1, val_2, val_3):
-    min = val_1
-    if val_2 < min:
-        min = val_2
-    if val_3 < min:
-        min = val_3
-    return min
+def check_banded(row, col):
+    bandwidth = 7
+
+    if row == col:
+        return True
+
+    top = col
+    btm = row
+
+    if row > col:
+        top = row
+        btm = col
+
+    while bandwidth > 0:
+        top = top - 1
+        btm = btm + 1
+        if top <= btm:
+            return True
+        bandwidth = bandwidth - 1
+
+    return False
+
+
+def unrestriced(gene1_str, gene2_str):
+    zero_list = [0]
+    lst_one = zero_list + list(gene1_str)
+    lst_two = zero_list + list(gene2_str)
+    matrix = [[None for x in range(len(lst_one))] for y in range(len(lst_two))
+
+    for i in range(len(lst_one)):
+        for j in rand(len(lst_two)):
+
 
 
 
