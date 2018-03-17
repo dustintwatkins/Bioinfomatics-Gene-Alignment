@@ -14,6 +14,17 @@ else:
 import time
 
 
+def find_min(val_1, val_2, val_3):
+    min = val_1
+    if val_2 < min:
+        min = val_2
+    if val_3 < min:
+        min = val_3
+    return min
+
+
+
+
 
 class GeneSequencing:
     def __init__( self ):
@@ -34,5 +45,3 @@ class GeneSequencing:
                 jresults.append(s)
             results.append(jresults)
         return results
-
-
