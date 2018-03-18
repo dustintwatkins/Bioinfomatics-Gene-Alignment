@@ -122,7 +122,7 @@ class Proj4GUI( QMainWindow ):
         #print(raw[0:3])
         #print(raw[-1])
         sequences = {}
-        
+
         i = 0
         #state   = 'id'
         cur_id  = ''
@@ -302,7 +302,7 @@ class Proj4GUI( QMainWindow ):
 
 
         #h.addWidget( self.clearButton )
-        
+
         h = QHBoxLayout()
         h.addStretch(1)
         h.addWidget( self.processButton )
@@ -366,7 +366,7 @@ class Proj4GUI( QMainWindow ):
 if __name__ == '__main__':
     # This line allows CNTL-C in the terminal to kill the program
     signal.signal(signal.SIGINT, signal.SIG_DFL)
-    
+
     app = QApplication(sys.argv)
     w = Proj4GUI()
     sys.exit(app.exec())
